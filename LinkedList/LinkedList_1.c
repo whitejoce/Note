@@ -3,37 +3,38 @@
 
 #define N 5
  
-struct data
+struct node
   {
-  	int d;
-  	struct data *next;
+    int d;
+	struct node *next;
   };
 
 int main(void)
   {
-  	int i;
-  	struct data *p,*end,*head;
-  	
-  	end=malloc(sizeof(struct data));
-  	end->next=NULL;
-  	head=end;
-  	
+    int i;
+    struct node *p,*end,*head;
+    
+    end=malloc(sizeof(struct node));
+    end->next=NULL;
+    head=end;
+    
     printf("Number of nodes: %d\n",N);
 
-  	for (i=0;i<N;i++)
-  	  {
-  	  	p=malloc(sizeof(struct data));
-  	  	scanf("%d",&p->d);
-  	  	p->next=NULL;
-  	  	end->next=p;
-  	  	end=p;
-	  }
-	
+    for (i=0;i<N;i++)
+      {
+        p=malloc(sizeof(struct node));
+        scanf("%d", &p->d);
+        p->next=NULL;
+        end->next=p;
+        end=p;
+      }
+  
+
     for (p=head->next;p!=NULL;p=p->next)
       {
         printf("%d ",p->d);
       }
-  	
-  	return 0;
-  	
+    
+    return 0;
+    
   }
