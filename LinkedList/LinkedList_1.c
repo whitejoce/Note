@@ -3,11 +3,10 @@
 
 #define N 5
  
-struct node
-  {
+struct node {
     int d;
-	struct node *next;
-  };
+    struct node *next;
+};
 
 int main(void)
   {
@@ -28,7 +27,6 @@ int main(void)
         end->next=p;
         end=p;
       }
-  
 
     for (p=head->next;p!=NULL;p=p->next)
       {
