@@ -11,7 +11,7 @@
    
      [No.1] 初次创建链表([代码链接](https://github.com/whitejoce/Note/blob/main/LinkedList/LinkedList_1.c))： 
       
-       | 输出惯用法:
+     | 输出惯用法 :
           
            for (p = first; p != NULL; p = p->next)
            ...
