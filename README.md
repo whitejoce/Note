@@ -7,7 +7,13 @@
      
 * * * 
 
-     Linked List
-     
+   链表 Linked List
+   
+   初次创建链表([链接](https://github.com/whitejoce/Note/blob/main/LinkedList/LinkedList_1.c))： 
+      
+   输出惯用法
+          
+           for (p = first; p != NULL; p = p->next)
+           ...
      
      
