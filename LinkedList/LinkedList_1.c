@@ -24,10 +24,10 @@ int main(void)
       {
         p=malloc(sizeof(struct node));
         scanf("%d", &p->data);
-        p->next=NULL;
         temp->next=p;
         temp=p;
       }
+    p->next=NULL;
 
     for (p=head->next;p!=NULL;p=p->next)
       {
