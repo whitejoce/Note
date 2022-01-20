@@ -1,22 +1,22 @@
 #include <stdio.h>
-#include <malloc.h>
+#include <stdlib.h>
 
 #define N 5
- 
+
 struct node
   {
     int data;
-    struct node *next;
+	  struct node *next;
   };
 
 int main(void)
   {
     int i;
-    struct node *new_node,*head,*p;
+    struct node *temp,*head,*p;
     
-    new_node=malloc(sizeof(struct node));
-    new_node->next=NULL;
-    head=new_node;
+    temp=malloc(sizeof(struct node));
+    temp->next=NULL;
+    head=temp;
     
     printf("Number of nodes: %d\n",N);
 
@@ -25,8 +25,8 @@ int main(void)
         p=malloc(sizeof(struct node));
         scanf("%d", &p->data);
         p->next=NULL;
-        new_node->next=p;
-        new_node=p;
+        temp->next=p;
+        temp=p;
       }
 
     for (p=head->next;p!=NULL;p=p->next)
